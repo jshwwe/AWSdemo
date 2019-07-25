@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Jul, 2019, 10:45:48 AM
+    Author     : Josh
+*/
+
+.inputfieldlog {   
+  font-family: Ubuntu-Bold;
+  color: #403866;
+  line-height: 1.2;
+  font-size: 18px;
+
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 62px;
+  padding: 0 20px 0 38px;
+}
+
+.fieldtag {
+  font-family: Ubuntu-Bold;
+  font-size: 18px;
+  color: #403866;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: left;
+
+  width: 100%;
+  display: block;
+}
+
+.topbar {
+    color: #ffffff;
+    font-size: 18pt;
+    padding-top: 15pt;
+    
+}
+
+.topbar a{
+    padding: 20pt;
+    color: #ffffff;
+}
+.topbar a:hover{
+     color: rgba(255,255,255, 0.5);
+}
+
+.bigbackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.backgroundimg {
+    height: inherit;
+}
