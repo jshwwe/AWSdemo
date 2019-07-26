@@ -92,11 +92,11 @@ include 'sessionchecker.php';
                                 <div class="item-thumb">
                                     <img src="images/futsal.jpg" alt="Thumb Image">
                                     <div class="item-hover">
-                                        <a target="_blank" href="book.php?activity=futsal" class="btn read-more">Book Now!</a>
+                                        <a href="book.php?activity=futsal" class="btn read-more">Book Now!</a>
                                     </div>
                                 </div>
                                 <div class="item-details">
-                                    <h3 class="item-title"><a target="_blank" href="book.php?activity=futsal">Futsal</a></h3>
+                                    <h3 class="item-title"><a href="book.php?activity=futsal">Futsal</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -105,11 +105,11 @@ include 'sessionchecker.php';
                                 <div class="item-thumb">
                                     <img src="images/basketball.jpg" alt="Thumb Image">
                                     <div class="item-hover">
-                                        <a target="_blank" href="book.php?activity=basketball" class="btn read-more">Book Now!</a>
+                                        <a href="book.php?activity=basketball" class="btn read-more">Book Now!</a>
                                     </div>
                                 </div>
                                 <div class="item-details">
-                                    <h3 class="item-title"><a target="_blank" href="book.php?activity=basketball">Basketball</a></h3>
+                                    <h3 class="item-title"><a href="book.php?activity=basketball">Basketball</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -118,11 +118,11 @@ include 'sessionchecker.php';
                                 <div class="item-thumb">
                                     <img src="images/tabletennis.jpg" alt="Thumb Image">
                                     <div class="item-hover">
-                                        <a target="_blank" href="book.php?activity=tabletennis" class="btn read-more">Book Now!</a>
+                                        <a href="book.php?activity=tabletennis" class="btn read-more">Book Now!</a>
                                     </div>
                                 </div>
                                 <div class="item-details">
-                                    <h3 class="item-title"><a target="_blank" href="book.php?activity=tabletennis">Table Tennis</a></h3>
+                                    <h3 class="item-title"><a href="book.php?activity=tabletennis">Table Tennis</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -131,11 +131,11 @@ include 'sessionchecker.php';
                                 <div class="item-thumb">
                                     <img src="images/tennis.jpg" alt="Thumb Image">
                                     <div class="item-hover">
-                                        <a target="_blank" href="book.php?activity=tennis" class="btn read-more">Book Now!</a>
+                                        <a href="book.php?activity=tennis" class="btn read-more">Book Now!</a>
                                     </div>
                                 </div>
                                 <div class="item-details">
-                                    <h3 class="item-title"><a target="_blank" href="book.php?activity=tennis">Tennis</a></h3>
+                                    <h3 class="item-title"><a href="book.php?activity=tennis">Tennis</a></h3>
                                 </div>
                             </div>
                         </div>
