@@ -102,7 +102,8 @@ $results = $db->query($sqlquery);
                                <form action="php/cancel.php" method="get"><button class="btn" name="bookid" value="' . $row["bookingid"] .'"><i class="fa fa-close"></i></button>
                                   </form>
                             </td>';
-                           echo '</tr>' ;
+                           echo '</tr>';
+                               counter++;
                            
                        }
                        ?>
