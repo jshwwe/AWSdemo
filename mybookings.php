@@ -103,7 +103,7 @@ $results = $db->query($sqlquery);
                                   </form>
                             </td>';
                            echo '</tr>';
-                               counter++;
+                               $counter++;
                            
                        }
                        ?>
