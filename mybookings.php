@@ -4,7 +4,7 @@ include 'sessionchecker.php';
 include 'dbconnect.php';
 
 $db = new mysqli($host,$username,$password,$dbname);
-$sqlquery = "SELECT * FROM bookings WHERE user = '". $_SESSION["username"] . "'";
+$sqlquery = "SELECT * FROM bookings WHERE user = '". $_SESSION['username'] . "'";
 
 $results = $db->query($sqlquery);
 
@@ -102,8 +102,7 @@ $results = $db->query($sqlquery);
                                <form action="php/cancel.php" method="get"><button class="btn" name="bookid" value="' . $row["bookingid"] .'"><i class="fa fa-close"></i></button>
                                   </form>
                             </td>';
-                           echo '</tr>';
-                               $counter++;
+                           echo '</tr>' ;
                            
                        }
                        ?>

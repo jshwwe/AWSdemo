@@ -1,7 +1,8 @@
-<!doctype html>
-<?php 
+<?php
 include 'sessionchecker.php';
 ?>
+
+<!doctype html>
 <html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
@@ -34,29 +35,43 @@ include 'sessionchecker.php';
     <script src="assets/js/modernizr-2.8.3.min.js"></script>
 
 </head>
-
-
 <body>
 
     <section class="banner-section text-center background-bg" data-image-src="images/runner.jpeg">
-      
         <div class="overlay">
                         <div class="topbar">
                             <a href="main.php"> Home </a>
                             <a href="mybookings.php"> My Bookings </a>
-                            <a href="php/logout.php"> Logout </a>
+                            <?php 
+                            if(!isset($_SESSION['username'])){
+                                echo "<a href='index.html'> Log In </a>";
+                            } else {
+                                echo "<a href='main.php'> Log Out </a>";
+                            }
+                            ?>
                         </div>
-            
             <div class="padding">
                 <div class="banner-contents">
                     <div class="inner-contents">
                         <div class="banner-logo">
-                            <h2 class="banner-title">Welcome <?php echo $_SESSION["fullname"]?>! </h2>
+                            <?php 
+                            if(!isset($_SESSION['username'])){
+                                echo "<h2 class='banner-title'>Welcome! One click to book away! </h2>";
+                            } else {
+                                echo "<h2 class='banner-title'>Welcome " , "<span style='color:green;'>" ,$_SESSION['fullname'], "</span>","!</h2>";
+                            }
+                            ?>
                         </div>
 
                         <h2 class="banner-title">Stay Healthy with us!</h2><!-- /.banner-title -->
                         <h3 class="banner-sub-title">Book your sports facilities now!</h3><!-- /.banner-sub-title -->
-                        <a href="book.php" class="btn purchase-btn">Book now!</a>
+                        <?php
+                            if(!isset($_SESSION['username'])){
+                                echo "<a href='index.html' class='btn purchase-btn'>Book now!</a>";
+                            } else {
+                                echo "<a href='book.php' class='btn purchase-btn'>Book now!</a>";
+                            }
+                        ?>
                     </div><!-- /.inner-content -->
                 </div><!-- /.banner-contents -->
             </div><!-- /.padding -->
@@ -79,11 +94,23 @@ include 'sessionchecker.php';
                                 <div class="item-thumb">
                                     <img src="images/badminton.jpg" alt="Thumb Image">
                                     <div class="item-hover">
-                                        <a href="book.php?activity=badminton" class="btn read-more">Book Now!</a>
+                                    <?php
+                                    if(!isset($_SESSION['username'])){
+                                        echo "<a href='index.html' class='btn read-more'>Book Now!</a>";
+                                    } else {
+                                        echo "<a href='book.php?activity=badminton' class='btn read-more'>Book Now!</a>";
+                                    }
+                                    ?>
                                     </div>
                                 </div>
                                 <div class="item-details">
-                                    <h3 class="item-title"><a href="book.php?activity=badminton">Badminton</a></h3>
+                                    <?php
+                                    if(!isset($_SESSION['username'])){
+                                        echo "<h3 class='item-title'><a href='index.html'>Badminton</a></h3>";
+                                    } else {
+                                        echo "<h3 class='item-title'><a href='book.php?activity=badminton'>Badminton</a></h3>";
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -92,12 +119,24 @@ include 'sessionchecker.php';
                                 <div class="item-thumb">
                                     <img src="images/futsal.jpg" alt="Thumb Image">
                                     <div class="item-hover">
-                                        <a href="book.php?activity=futsal" class="btn read-more">Book Now!</a>
+                                    <?php
+                                    if(!isset($_SESSION['username'])){
+                                        echo "<a href='index.html' class='btn read-more'>Book Now!</a>";
+                                    } else {
+                                        echo "<a href='book.php?activity=futsal' class='btn read-more'>Book Now!</a>";
+                                    }
+                                    ?>                                    
                                     </div>
                                 </div>
                                 <div class="item-details">
-                                    <h3 class="item-title"><a href="book.php?activity=futsal">Futsal</a></h3>
-                                </div>
+                                <?php
+                                    if(!isset($_SESSION['username'])){
+                                        echo "<h3 class='item-title'><a href='index.html'>Futsal</a></h3>";
+                                    } else {
+                                        echo "<h3 class='item-title'><a href='book.php?activity=futsal'>Futsal</a></h3>";
+                                    }
+                                    ?>                                
+                                    </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
@@ -105,12 +144,24 @@ include 'sessionchecker.php';
                                 <div class="item-thumb">
                                     <img src="images/basketball.jpg" alt="Thumb Image">
                                     <div class="item-hover">
-                                        <a href="book.php?activity=basketball" class="btn read-more">Book Now!</a>
+                                    <?php
+                                    if(!isset($_SESSION['username'])){
+                                        echo "<a href='index.html' class='btn read-more'>Book Now!</a>";
+                                    } else {
+                                        echo "<h3 class='item-title'><a href='book.php?activity=basketball' class='btn read-more'>Book Now!</a></h3>";
+                                    }
+                                    ?>                                    
                                     </div>
                                 </div>
                                 <div class="item-details">
-                                    <h3 class="item-title"><a href="book.php?activity=basketball">Basketball</a></h3>
-                                </div>
+                                <?php
+                                    if(!isset($_SESSION['username'])){
+                                        echo "<h3 class='item-title'><a href='index.html'>Basketball</a></h3>";
+                                    } else {
+                                        echo "<h3 class='item-title'><a href='book.php?activity=basketball'>Basketball</a></h3>";
+                                    }
+                                    ?>                                 
+                                    </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
@@ -118,12 +169,24 @@ include 'sessionchecker.php';
                                 <div class="item-thumb">
                                     <img src="images/tabletennis.jpg" alt="Thumb Image">
                                     <div class="item-hover">
-                                        <a href="book.php?activity=tabletennis" class="btn read-more">Book Now!</a>
+                                    <?php
+                                    if(!isset($_SESSION['username'])){
+                                        echo "<a href='index.html' class='btn read-more'>Book Now!</a>";
+                                    } else {
+                                        echo "<h3 class='item-title'><a href='book.php?activity=tabletennis' class='btn read-more'>Book Now!</a></h3>";
+                                    }
+                                    ?>                                     
                                     </div>
                                 </div>
                                 <div class="item-details">
-                                    <h3 class="item-title"><a href="book.php?activity=tabletennis">Table Tennis</a></h3>
-                                </div>
+                                <?php
+                                    if(!isset($_SESSION['username'])){
+                                        echo "<h3 class='item-title'><a href='index.html'>Table Tennis</a></h3>";
+                                    } else {
+                                        echo "<h3 class='item-title'><a href='book.php?activity=tabletennis'>Table Tennis</a></h3>";
+                                    }
+                                    ?>                                   
+                                    </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
@@ -131,12 +194,24 @@ include 'sessionchecker.php';
                                 <div class="item-thumb">
                                     <img src="images/tennis.jpg" alt="Thumb Image">
                                     <div class="item-hover">
-                                        <a href="book.php?activity=tennis" class="btn read-more">Book Now!</a>
+                                    <?php
+                                    if(!isset($_SESSION['username'])){
+                                        echo "<a href='index.html' class='btn read-more'>Book Now!</a>";
+                                    } else {
+                                        echo "<h3 class='item-title'><a href='book.php?activity=tennis' class='btn read-more'>Book Now!</a></h3>";
+                                    }
+                                    ?>                                     
                                     </div>
                                 </div>
                                 <div class="item-details">
-                                    <h3 class="item-title"><a href="book.php?activity=tennis">Tennis</a></h3>
-                                </div>
+                                <?php
+                                    if(!isset($_SESSION['username'])){
+                                        echo "<h3 class='item-title'><a href='index.html'>Tennis</a></h3>";
+                                    } else {
+                                        echo "<h3 class='item-title'><a href='book.php?activity=tennis'>Tennis</a></h3>";
+                                    }
+                                    ?>                                 
+                                    </div>
                             </div>
                         </div>
                     </div>

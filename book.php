@@ -105,8 +105,8 @@ $results = $db->query($sqlquery);
                                 <select name="venue" required>
                                     <option value="" selected disabled hidden>Choose location</option>
                               <option value="Singtel Recreation Center">Singtel Recreation Center</option>
-                              <option value="Kallang Sports Hub">Kallang Sports Hub</option>
-                              <option value="Tampines Hub">Tampines Hub</option>
+                              <option value="Singtel Recreation Center">Kallang Sports Hub</option>
+                              <option value="Singtel Recreation Center">Tampines Hub</option>
                                 </select>
                             </td>
                             <td>
